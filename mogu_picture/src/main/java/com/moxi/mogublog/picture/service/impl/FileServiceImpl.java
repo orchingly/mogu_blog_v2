@@ -204,7 +204,7 @@ public class FileServiceImpl extends SuperServiceImpl<FileMapper, File> implemen
                 //获取扩展名，默认是jpg
                 String picExpandedName = FileUtils.getPicExpandedName(oldName);
                 // 检查是否是安全的格式
-                if (!FileUtils.isPic(picExpandedName)) {
+                if (!FileUtils.isSafe(picExpandedName)) {
                     throw new InsertException("请上传正确格式的文件");
                 }
 
