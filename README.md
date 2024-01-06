@@ -164,7 +164,7 @@
 
 ## 项目文档
 
-文档地址：https://docs.moguit.cn
+文档地址：http://docs.moguit.cn
 
 ## 项目地址
 
