@@ -23,7 +23,6 @@
 </a></p>
 
 
-
 [项目介绍](#项目介绍) | [站点演示](#站点演示) | [项目特点](#项目特点) | [技术架构](#技术选型) | [项目目录](#项目目录) | [项目文档](#项目文档)  | [快速开始](#快速开始) | [视频教程](#视频教程)| [项目截图](#移动端截图) | [更新记录](https://gitee.com/moxi159753/mogu_blog_v2/releases) | [笔记仓库](https://gitee.com/moxi159753/LearningNotes)
 
 ##  前言
@@ -87,7 +86,7 @@
 >
 > 【演示账号】：[点击获取](https://gitee.com/moxi159753/mogu_blog_v2/raw/Nacos/doc/images/qq/%E8%8E%B7%E5%8F%96%E6%BC%94%E7%A4%BA%E7%8E%AF%E5%A2%83%E8%B4%A6%E5%8F%B7.jpg)
 >
-> 【小程序】蘑菇博客的移动端版本，可以扫码体验。参考 [蘑菇博客小程序部署](http://www.moguit.cn/info/605) 文档，以及Bilibili上 [20分钟部署博客小程序视频](https://www.bilibili.com/video/BV1sQ4y117nN) 完成小程序的搭建。
+> 【小程序】蘑菇博客的移动端版本，可以扫码体验。参考 [蘑菇博客小程序部署](http://www.moguit.cn/info/605) 文档，以及Bilibili上 [20分钟部署博客小程序视频](https://www.bilibili.com/video/BV1sQ4y117nN) 完成小程序的搭建。【下面是社区版的小程序演示】
 
 |                                                          |
 | :------------------------------------------------------: |
@@ -165,9 +164,7 @@
 
 ## 项目文档
 
-文档地址：http://moxi159753.gitee.io/mogu_blog_doc
-
-备用文档地址：http://doc.moguit.cn
+文档地址：https://docs.moguit.cn
 
 ## 项目地址
 
