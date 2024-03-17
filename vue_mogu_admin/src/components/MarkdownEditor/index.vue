@@ -101,7 +101,8 @@
         // 返回的文本
         // return this.$commonUtil.markdownToHtml(text);
         // console.log("获取转换后的文本", this.$commonUtil.markdownToHtml(localStorage.getItem('vditorvditor')))
-        return this.vditor.getHTML();
+        // return this.vditor.getHTML();
+        return this.vditor.getValue()
       },
       setData: function(data) {
         // console.log("将html转", this.vditor.html2md(data))

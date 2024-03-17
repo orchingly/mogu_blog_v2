@@ -144,7 +144,8 @@ const FUNCTIONS = {
     turndownService.use([tables, strikethrough])
 
     console.log("转换后", turndownService.turndown(text))
-    return turndownService.turndown(text)
+    // return turndownService.turndown(text)
+    return text
   },
   /**
    * 将Html转成Markdown文件
