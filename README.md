@@ -1,5 +1,34 @@
 # 蘑菇博客
 
+## daily_blog分支
+- 修改了博客连接的跳转方式，点击内部链接在当前页面打开新页面不打开新标签页，每次打开新标签页不多久浏览器标签页都装不下了
+
+- 引入mermaid 前端支持mermaid时序图，流程图的渲染
+
+- 导入博客或新建博客保存数据均为原始md格式的数据，不再转换为html保存，所以编辑器加载的数据也是原始数据，否则多次编辑博客就会出现循环
+
+  ```mermaid
+  graph LR
+  
+  A[Markdown] --> |转换| B[HTML]
+  
+  B --> |转换| A
+  
+  ```
+
+  
+
+  来回转换导致格式异常，同时博客详情加载的时候后台先将原始数据转换为html返回到前端，以此来正常渲染
+
+
+
+- 修复了博客详情页目录有列表但是没有内容的问题，原因是slot渲染失败
+
+- 基于daily_blog分支部署的个人博客网站 [Daily's Blog](https://blog.dailys.top)
+
+
+
+
 <p align=center>
   <a href="http://www.moguit.cn">
     <img src="./doc/images/gitee/favicon2.ico" alt="蘑菇博客" style="width:200px;height:200px">
