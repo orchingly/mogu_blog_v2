@@ -181,14 +181,15 @@
             path: "/info",
             query: {blogOid: blog.oid}
           });
-          window.open(routeData.href, '_blank');
+          //当前连接打开
+          window.location.href = routeData.href
         } else if(blog.type == "1") {
           var params = new URLSearchParams();
           params.append("uid", blog.uid);
           getBlogByUid(params).then(response => {
             // 记录一下用户点击日志
           });
-          window.open(blog.outsideLink, '_blank');
+          window.open(blog.outsideLink)
         }
       },
       //跳转到搜索详情页

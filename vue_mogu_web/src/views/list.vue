@@ -182,7 +182,8 @@ export default {
           path: "/info",
           query: {blogOid: blog.oid}
         });
-        window.open(routeData.href, '_blank');
+        window.location.href = routeData.href
+        // window.open(routeData.href, '_blank');
       } else if(blog.type == "1") {
         var params = new URLSearchParams();
         params.append("uid", blog.uid);
@@ -198,14 +199,16 @@ export default {
         path: "/list",
         query: { sortUid: uid }
       });
-      window.open(routeData.href, '_blank');
+      window.location.href = routeData.href
+      // window.open(routeData.href, '_blank');
     },
     goToAuthor(author) {
       let routeData = this.$router.resolve({
         path: "/list",
         query: {author: author}
       });
-      window.open(routeData.href, '_blank');
+      window.location.href = routeData.href
+      // window.open(routeData.href, '_blank');
     },
     // 加载内容
     loadContent: function() {

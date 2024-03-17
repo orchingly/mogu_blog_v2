@@ -500,12 +500,12 @@
       <router-view/>
     </div>
 
-    <footer>
+    <!-- <footer>
       <p>
         Copyright <a href="https://gitee.com/moxi159753/mogu_blog_v2" @click="goIndex()"> &nbsp;蘑菇博客&nbsp;</a>
         <a href="https://beian.miit.gov.cn/">{{ info.recordNum }}</a>
       </p>
-    </footer>
+    </footer> -->
 
     <div>
       <a
@@ -768,7 +768,8 @@ export default {
         path: "/info",
         query: {blogUid: uid}
       });
-      window.open(routeData.href, '_blank');
+      window.location.href = routeData.href
+      // window.open(routeData.href, '_blank');
     },
 
     // 获取导航栏列表
@@ -798,7 +799,8 @@ export default {
           let routeData = this.$router.resolve({
             path: "/messageBoard"
           });
-          window.open(routeData.href, '_blank');
+          window.location.href = routeData.href
+          // window.open(routeData.href, '_blank');
         }
           ;
           break;
@@ -807,7 +809,8 @@ export default {
             path: "/info",
             query: {blogUid: comment.blogUid}
           });
-          window.open(routeData.href, '_blank');
+          window.location.href = routeData.href
+          // window.open(routeData.href, '_blank');
         }
           ;
           break;
@@ -815,7 +818,8 @@ export default {
           let routeData = this.$router.resolve({
             path: "/about"
           });
-          window.open(routeData.href, '_blank');
+          window.location.href = routeData.href
+          // window.open(routeData.href, '_blank');
         }
           ;
           break;
@@ -1302,7 +1306,7 @@ export default {
 }
 
 .emoji-size-small {
-/ / 表情大小 zoom: 0.3;
+zoom: 0.3;
 }
 </style>
 

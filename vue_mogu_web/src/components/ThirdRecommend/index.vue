@@ -40,7 +40,8 @@ export default {
             path: "/info",
             query: {blogOid: blog.oid}
           });
-          window.open(routeData.href, '_blank');
+          window.location.href = routeData.href
+          // window.open(routeData.href, '_blank');
         } else if(blog.type == "1") {
           var params = new URLSearchParams();
           params.append("uid", blog.uid);

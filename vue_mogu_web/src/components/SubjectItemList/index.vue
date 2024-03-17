@@ -150,7 +150,8 @@
             path: "/info",
             query: {blogUid: uid}
           });
-          window.open(routeData.href, '_blank');
+          window.location.href = routeData.href
+          // window.open(routeData.href, '_blank');
         },
         //跳转到搜索详情页
         goToList(uid) {

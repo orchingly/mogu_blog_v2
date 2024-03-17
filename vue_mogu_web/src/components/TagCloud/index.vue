@@ -27,7 +27,8 @@ export default {
     //跳转到搜索详情页
     goToList(uid) {
       let routeData = this.$router.resolve({ path: "/list", query: { tagUid: uid } });
-      window.open(routeData.href, '_blank');
+      window.location.href = routeData.href
+      // window.open(routeData.href, '_blank');
     },
   }
 };

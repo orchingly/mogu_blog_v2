@@ -133,7 +133,8 @@ export default {
             path: "/list",
             query: { tagUid: entity.uid }
           });
-          window.open(routeData.href, "_blank");
+          window.location.href = routeData.href
+          // window.open(routeData.href, "_blank");
         }
           break;
         case "blogSort":
@@ -142,7 +143,8 @@ export default {
             path: "/list",
             query: { sortUid: entity.blogSort.uid }
           });
-          window.open(routeData.href, "_blank");
+          window.location.href = routeData.href
+          // window.open(routeData.href, "_blank");
         }
           break;
         case "author":
@@ -151,7 +153,8 @@ export default {
             path: "/list",
             query: { author: entity.author }
           });
-          window.open(routeData.href, "_blank");
+          window.location.href = routeData.href
+          // window.open(routeData.href, "_blank");
         }
           break;
 
@@ -162,7 +165,8 @@ export default {
               path: "/info",
               query: { blogOid: entity.oid }
             });
-            window.open(routeData.href, "_blank");
+            window.location.href = routeData.href
+            // window.open(routeData.href, "_blank");
           } else if(entity.type == "1") {
             window.open(entity.outsideLink, '_blank');
           }
