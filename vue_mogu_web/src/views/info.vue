@@ -234,6 +234,7 @@
             }
             this.blogContent = response.data.content
             this.getMarkDown(response)
+            this.formatMath()
             this.loadingInstance.close();
           });
 
@@ -301,6 +302,17 @@
             this.showSidebar = document.body.clientWidth > 950
         },
         methods: {
+          formatMath(){
+            setTimeout(()=>{
+              this.$nextTick(()=>{
+                if(this.MathJax.isMathjaxConfig){
+                  this.MathJax.initMathjaxConfig();
+                }
+                //ck-content是对应要渲染数学公式的dom的class
+                this.MathJax.MathQueue('ck-content');
+              })
+            },500)
+          },
           initMermaid() {
             let mermaidNodes = document.getElementsByClassName('language-mermaid')
             for (
@@ -323,6 +335,10 @@
               this.$nextTick(() => {
                 this.initMermaid()
               })
+          },
+
+          initMathJax(){
+            MathJax.Hub.Config()
           },
             //拿到vuex中的写的两个方法
             ...mapMutations(["setCommentList", "setWebConfigData"]),

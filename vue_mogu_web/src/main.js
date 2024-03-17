@@ -28,6 +28,9 @@ Object.defineProperty(Vue.prototype, '$xss', {
 import prototype from './utils/prototype'
 Vue.use(prototype)
 
+import MathJax from './utils/MathJax'
+Vue.prototype.MathJax = MathJax;
+
 import MetaInfo from 'vue-meta'
 Vue.use(MetaInfo)
 
