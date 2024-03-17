@@ -29,28 +29,29 @@
             'side-catalog__list-item--active': active===item.ref,
             'side-catalog__list-item--child': isChildren(item.level)
           }"
-        >
+          >
           <!-- 每行插槽 -->
-          <slot
+          <!-- fix 侧边目录空白 -->
+          <!-- <slot
             name="row"
             v-bind:level="item.level"
             v-bind:isActive="active===item.ref"
             v-bind:title="item.title"
-          >
+          > -->
             <!-- 每行icon插槽 -->
-            <slot
+            <!-- <slot
               name="default"
               v-bind:level="item.level"
               v-bind:isActive="active===item.ref"
-            >
+            > -->
               <i
                 class="side-catalog__list-item-icon"
                 :class="{
               'side-catalog__list-item-icon--child': isChildren(item.level)
             }"
                 :style="active===item.ref ? {color: activeColor}: ''"
-              />
-            </slot>
+              ></i>
+            <!-- </slot> -->
             <span
               class="side-catalog__list-item-title"
               :class="[
@@ -62,7 +63,7 @@
             {'padding-left': iconLeft ?  getTitleMargin(item.level) : ''}
             ]"
             >{{ item.title }}</span>
-          </slot>
+          <!-- </slot> -->
         </div>
       </div>
 
