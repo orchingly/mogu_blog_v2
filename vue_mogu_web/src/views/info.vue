@@ -126,6 +126,7 @@
     import { Loading } from "element-ui";
     import Sticky from "@/components/Sticky";
     import SideCatalog from '@/components/VueSideCatalog'
+    import mermaid from 'mermaid'
 
     export default {
         name: "info",
@@ -232,6 +233,7 @@
               this.getCommentDataList();
             }
             this.blogContent = response.data.content
+            this.getMarkDown(response)
             this.loadingInstance.close();
           });
 
@@ -299,6 +301,29 @@
             this.showSidebar = document.body.clientWidth > 950
         },
         methods: {
+          initMermaid() {
+            let mermaidNodes = document.getElementsByClassName('language-mermaid')
+            for (
+              let i = 0, mermaidNodesLen = mermaidNodes.length;
+              i < mermaidNodesLen;
+              i++
+            ) {
+              this.initMermaidItem(mermaidNodes[i], mermaidNodes[i].textContent, i)
+            }
+          },
+          initMermaidItem(node, html, i) {
+            var insertSvg = function (svgCode, bindFunctions) {
+              node.innerHTML = svgCode
+            }
+            var graph = mermaid.render('mermaid' + i, html, insertSvg)
+          },
+
+          getMarkDown(res) {
+              this.htmlUrl = res.data
+              this.$nextTick(() => {
+                this.initMermaid()
+              })
+          },
             //拿到vuex中的写的两个方法
             ...mapMutations(["setCommentList", "setWebConfigData"]),
             handleCurrentChange: function(val) {
@@ -379,7 +404,8 @@
                     path: "/info",
                     query: { blogUid: uid }
                 });
-                window.open(routeData.href, "_blank");
+                window.location.href = routeData.href
+                // window.open(routeData.href, "_blank");
             },
             //跳转到搜索详情页
             goToList(uid) {
@@ -387,7 +413,8 @@
                     path: "/list",
                     query: { tagUid: uid }
                 });
-                window.open(routeData.href, "_blank");
+                window.location.href = routeData.href
+                // window.open(routeData.href, "_blank");
             },
             //跳转到搜索详情页
             goToSortList(uid) {
@@ -395,7 +422,8 @@
                     path: "/list",
                     query: { sortUid: uid }
                 });
-                window.open(routeData.href, "_blank");
+                window.location.href = routeData.href
+                // window.open(routeData.href, "_blank");
             },
             //跳转到搜索详情页
             goToAuthor(author) {
@@ -403,7 +431,8 @@
                     path: "/list",
                     query: { author: author }
                 });
-                window.open(routeData.href, "_blank");
+                window.location.href = routeData.href
+                // window.open(routeData.href, "_blank");
             },
 
             imageChange: function(e) {
