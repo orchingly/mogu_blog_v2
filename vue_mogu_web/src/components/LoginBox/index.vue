@@ -132,7 +132,8 @@
           fullscreen: true,
           lock: true
         },
-        vueMoguWebUrl: process.env.VUE_MOGU_WEB,
+        //不要依赖VUE_MOGU_WEB，如果有多个域名，登录后无法跳转
+        vueMoguWebUrl: window.location.origin,//process.env.VUE_MOGU_WEB,
         showPasswordLogin: true, // 是否显示账号密码登录
         wechatOrCode: "", // 微信公众号登录二维码
         ticket: "", // 用户的票券
