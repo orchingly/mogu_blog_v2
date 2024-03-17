@@ -15,7 +15,7 @@ const app = {
         if(state.userInfo.photoUrl) {
           return state.userInfo.photoUrl
         } else {
-          return "https://gitee.com/moxi159753/wx_picture/raw/master/picture/favicon.png";
+          return "https://dailys.top:9000/blog-imge/1710579223.png";
         }
       } else {
         return "../../static/images/defaultAvatar.png"

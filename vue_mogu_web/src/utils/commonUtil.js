@@ -17,7 +17,7 @@ const ECode = {
  * 全局配置文件
  */
 const SysConf = {
-  defaultAvatar: "https://gitee.com/moxi159753/wx_picture/raw/master/picture/favicon.png", // 默认头像
+  defaultAvatar: "https://dailys.top:9000/blog-imge/favicon.png", // 默认头像
 }
 
 /** **********************************************************/
