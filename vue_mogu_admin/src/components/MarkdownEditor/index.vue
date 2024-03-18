@@ -45,7 +45,7 @@
           tab: '\t',
           counter: '999999',
           typewriterMode: true,
-          mode: 'wysiwyg',
+          mode: 'ir',
           comment: true,
           preview: {
             delay: 100,
