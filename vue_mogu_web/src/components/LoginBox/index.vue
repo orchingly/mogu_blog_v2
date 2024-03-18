@@ -85,7 +85,7 @@
       <el-divider></el-divider>
       <el-form :rules="rules" :label-position="labelPosition" :model="registerForm" ref="registerForm">
         <el-form-item label="用户名" prop="userName">
-          <el-input v-model="registerForm.userName" placeholder="用户名长度在5~20之间" :disabled="loginType.password"></el-input>
+          <el-input v-model="registerForm.userName" placeholder="用户名长度在2~20之间" :disabled="loginType.password"></el-input>
         </el-form-item>
 
         <el-form-item label="昵称" prop="nickName">
@@ -164,7 +164,7 @@
         loginRules: {
           userName: [
             {required: true, message: '请输入用户名', trigger: 'blur'},
-            { min: 5, message: "用户名长度大于等于 5 个字符", trigger: "blur" },
+            { min: 2, message: "用户名长度大于等于 2 个字符", trigger: "blur" },
             { max: 20, message: "用户名长度不能大于 20 个字符", trigger: "blur" }
           ],
           nickName: [
@@ -181,7 +181,7 @@
         rules: {
           userName: [
             {required: true, message: '请输入用户名', trigger: 'blur'},
-            { min: 5, message: "用户名长度大于等于 5 个字符", trigger: "blur" },
+            { min: 2, message: "用户名长度大于等于 2 个字符", trigger: "blur" },
             { max: 20, message: "用户名长度不能大于 20 个字符", trigger: "blur" }
           ],
           nickName: [
