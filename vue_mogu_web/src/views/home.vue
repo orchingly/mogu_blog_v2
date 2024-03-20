@@ -249,7 +249,6 @@
                   </div>
                 </el-card>
               </el-timeline-item>
-
               <el-timeline-item v-if="commentList.length == 0" placement="top">
                 <el-card>
                   <span style="font-size: 16px">空空如也~</span>
@@ -833,8 +832,14 @@ export default {
       params.currentPage = 1;
       getCommentListByUser(params).then(response => {
         if (response.code == this.$ECode.SUCCESS) {
-          this.commentList = response.data.commentList
-          this.replyList = response.data.replyList
+          response.data.commentList.forEach(element => {
+            this.commentList.push(element)
+          })
+          response.data.replayList.forEach(rep => {
+            this.replyList.push(rep)
+          })
+          //this.commentList.push(response.data.commentList)
+          //this.replyList.push(response.data.replyList)
         }
       })
     },
@@ -923,7 +928,8 @@ export default {
      * @returns {string}
      */
     timeAgo(dateTimeStamp) {
-      return timeAgo(dateTimeStamp)
+      //return timeAgo(dateTimeStamp)
+      return dateTimeStamp
     },
 
     cropSuccess(resData) {
