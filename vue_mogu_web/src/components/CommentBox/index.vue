@@ -128,6 +128,7 @@
 
         // 评论来源： MESSAGE_BOARD，ABOUT，BLOG_INFO 等 代表来自某些页面的评论
         let source = "";
+        let sourceName = '';
         // 替换表情
         console.log("替换后", this.value.replace(/:.*?:/g, this.emoji))
         let content = this.value.replace(/:.*?:/g, this.emoji);
@@ -138,6 +139,7 @@
         if(this.commentInfo) {
           blogUid = this.commentInfo.blogUid;
           source = this.commentInfo.source;
+          sourceName = this.commentInfo.sourceName
         }
         this.comments = {
           userUid: userUid,
@@ -146,6 +148,7 @@
           content: content,
           blogUid: blogUid,
           source: source,
+          sourceName: sourceName,
           reply: [],
         }
         this.value = '';

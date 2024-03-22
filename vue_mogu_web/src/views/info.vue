@@ -151,7 +151,8 @@
                 commentInfo: {
                     // 评论来源： MESSAGE_BOARD，ABOUT，BLOG_INFO 等 代表来自某些页面的评论
                     source: "BLOG_INFO",
-                    blogUid: this.$route.query.blogUid
+                    blogUid: this.$route.query.blogUid,
+                    sourceName: ''
                 },
                 currentPage: 1,
                 pageSize: 10,
@@ -228,6 +229,7 @@
               this.blogUid = response.data.uid
               this.blogOid = response.data.oid
               this.commentInfo.blogUid = response.data.uid;
+              this.commentInfo.sourceName = response.data.title
               document.title = response.data.title
               this.getSameBlog()
               this.getCommentDataList();
@@ -380,6 +382,7 @@
                 params.userUid = e.userUid;
                 params.content = e.content;
                 params.blogUid = e.blogUid;
+                params.sourceName = e.sourceName;
                 addComment(params).then(response => {
                     if (response.code == this.$ECode.SUCCESS) {
                         this.$notify({
