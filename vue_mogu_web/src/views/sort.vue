@@ -120,7 +120,7 @@ export default {
       getArticleByMonth(params).then(response => {
         if (response.code == this.$ECode.SUCCESS) {
           this.itemByDate = []
-          response.data.array.forEach(element => {
+          response.data.forEach(element => {
             this.itemByDate.push(element)
           });
         }
