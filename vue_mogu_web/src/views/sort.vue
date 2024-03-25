@@ -119,7 +119,10 @@ export default {
       params.append("monthDate", content);
       getArticleByMonth(params).then(response => {
         if (response.code == this.$ECode.SUCCESS) {
-          this.itemByDate = response.data;
+          this.itemByDate = []
+          response.data.array.forEach(element => {
+            this.itemByDate.push(element)
+          });
         }
       });
     },
