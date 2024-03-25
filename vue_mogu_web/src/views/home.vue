@@ -832,6 +832,8 @@ export default {
       params.currentPage = 1;
       getCommentListByUser(params).then(response => {
         if (response.code == this.$ECode.SUCCESS) {
+          this.commentList = []
+          this.replyList = []
           response.data.commentList.forEach(element => {
             this.commentList.push(element)
           })
