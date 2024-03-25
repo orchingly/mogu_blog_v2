@@ -154,6 +154,7 @@
         params.toUid = e.toCommentUid;
         params.toUserUid = e.toUserUid;
         params.source = e.source
+        params.sourceName = e.sourceName;
         addComment(params).then(response => {
             if (response.code == this.$ECode.SUCCESS) {
               let commentData = response.data
