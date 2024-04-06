@@ -536,4 +536,24 @@
   .line-style--active {
     background: currentColor;
   }
+  /* 代码块字体Consolas */
+  .hljs {
+    font-family: "Consolas", "Courier New", "monospace" !important;
+  }
+  
+  /* 行内代码背景+圆角+字体 */
+  p code{
+    font-family: Consolas, SFMono-Regular, SF Mono, Menlo, Liberation Mono, monospace, sans-serif;
+    margin: 0 3px;
+    display: inline-block;
+    overflow-x: auto;
+    vertical-align: middle;
+    border-radius: 3px;
+    background-color: #fbe5e1;
+    padding: 2px 6px;
+    font-size: .9em;
+    line-height: 1.2em;
+    color: #C7254E;
+    border-radius: 4px;
+  }
 </style>
