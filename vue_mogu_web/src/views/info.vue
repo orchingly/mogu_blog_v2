@@ -556,4 +556,20 @@
     color: #C7254E;
     border-radius: 4px;
   }
+
+/* 列表行内代码高亮 */
+  li code{
+    font-family: Consolas, SFMono-Regular, SF Mono, Menlo, Liberation Mono, monospace, sans-serif;
+    margin: 0 3px;
+    display: inline-block;
+    overflow-x: auto;
+    vertical-align: middle;
+    border-radius: 3px;
+    background-color: #fbe5e1;
+    padding: 2px 6px;
+    font-size: .9em;
+    line-height: 1.2em;
+    color: #C7254E;
+    border-radius: 4px;
+  }
 </style>
