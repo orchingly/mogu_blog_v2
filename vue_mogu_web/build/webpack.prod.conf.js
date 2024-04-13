@@ -134,6 +134,10 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: './'
       },
       {
+        from: path.resolve(__dirname, '../robots.txt'),
+        to: './'
+      },
+      {
         from: path.resolve(__dirname, '../BingSiteAuth.xml'),
         to: './'
       },
