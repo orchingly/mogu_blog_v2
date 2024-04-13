@@ -134,6 +134,10 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: './'
       },
       {
+        from: path.resolve(__dirname, '../BingSiteAuth.xml'),
+        to: './'
+      },
+      {
         from: path.resolve(__dirname, '../env-config.js'),
         to: './'
       }
